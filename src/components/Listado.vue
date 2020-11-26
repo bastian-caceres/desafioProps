@@ -3,13 +3,13 @@
     <h1>Crea Una Nueva Tarea</h1>
     <!-- ingreso de datos -->
     <div class="input-group mb-3">
-      <input type="text" class="form-control boton" placeholder="Ingresa una Tarea..." aria-label="nombre" aria-describedby="button-addon2" v-model="nombre">
+      <input type="text" class="form-control boton" placeholder="Ingresa una Tarea..." aria-label="tarea" aria-describedby="button-addon2" v-model="tarea">
       <div class="input-group-append">
-        <button class="btn btn-outline-secondary" type="button" @click="mostrarNombre">Agregar</button>
+        <button class="btn btn-outline-secondary" type="button" @click="mostrarTarea">Agregar</button>
       </div>
     </div>
 
-    <ListaChica :ListaTareas="listaNombres" @eliminarTareas="eliminarTarea"/>
+    <ListaChica :ListaTareasH="listaTareasP" @eliminarTareas="eliminarTarea"/>
   </div>
 </template>
 
@@ -20,24 +20,24 @@ export default {
   name: 'Listado',
   data() {
         return {
-            nombre: '',
-            listaNombres: []
+            tarea: '',
+            listaTareasP: []
         }
     },
     components:{
      ListaChica
     },
     methods: {
-        mostrarNombre(){
-            if (this.nombre) {
-                this.listaNombres.push(this.nombre);
-                this.nombre = "";
+        mostrarTarea(){
+            if (this.tarea) {
+                this.listaTareasP.push(this.tarea);
+                this.tarea = "";
             } else {
                 console.log("no tiene nombre");
             }
         },
         eliminarTarea(index){
-            this.listaNombres.splice(index,1);
+            this.listaTareasP.splice(index,1);
         }
     },
 }
