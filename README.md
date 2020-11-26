@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # desafiosegundosvue
 
 ## Project setup
@@ -22,3 +23,6 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+=======
+# desafioProps
+>>>>>>> 867ce6c1a32096bae1c7aee8673d50bed827aa2b
